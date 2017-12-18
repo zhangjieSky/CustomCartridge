@@ -25,6 +25,9 @@
                                     <constraint firstAttribute="width" constant="46" id="s9o-9S-gnF"/>
                                 </constraints>
                                 <state key="normal" title="选择框"/>
+                                <connections>
+                                    <action selector="choice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZV-wO-Kks"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选项显示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="105-Us-qfX">
                                 <rect key="frame" x="128" y="71" width="207" height="42"/>
@@ -32,19 +35,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYG-ct-vbC">
-                                <rect key="frame" x="156" y="182" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gir-v1-KkI">
+                                <rect key="frame" x="45" y="230" width="105" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9sK-tw-HfZ"/>
+                                    <constraint firstAttribute="width" constant="105" id="EeP-Tl-8Ee"/>
+                                    <constraint firstAttribute="height" constant="30" id="I9J-48-Xbz"/>
                                 </constraints>
-                                <state key="normal" title="弹窗提醒"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzB-Kw-4P1">
-                                <rect key="frame" x="156" y="288" width="62" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MT9-kS-2yk"/>
-                                </constraints>
-                                <state key="normal" title="自定宽高"/>
+                                <state key="normal" title="自定义显示UI"/>
+                                <connections>
+                                    <action selector="customBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTh-fr-i9O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,18 +52,17 @@
                             <constraint firstItem="c7J-h4-hJy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="4e1-pB-t1Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="105-Us-qfX" secondAttribute="trailing" constant="40" id="5Zd-Ij-aRa"/>
                             <constraint firstItem="105-Us-qfX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="BDf-5d-XC3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bzB-Kw-4P1" secondAttribute="trailing" constant="157" id="DCE-JA-nLr"/>
                             <constraint firstItem="c7J-h4-hJy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="HtI-Z0-lPx"/>
-                            <constraint firstItem="UYG-ct-vbC" firstAttribute="top" secondItem="105-Us-qfX" secondAttribute="bottom" constant="69" id="TqK-og-1br"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UYG-ct-vbC" secondAttribute="trailing" constant="157" id="jW1-z5-cy4"/>
-                            <constraint firstItem="bzB-Kw-4P1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="p4I-kK-Iaq"/>
-                            <constraint firstItem="UYG-ct-vbC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="tRf-eD-ZdQ"/>
+                            <constraint firstItem="Gir-v1-KkI" firstAttribute="top" secondItem="c7J-h4-hJy" secondAttribute="bottom" constant="117" id="TkY-ZU-dGp"/>
+                            <constraint firstItem="Gir-v1-KkI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="cr1-y4-C17"/>
                             <constraint firstItem="105-Us-qfX" firstAttribute="centerY" secondItem="c7J-h4-hJy" secondAttribute="centerY" id="ufT-DW-ojl"/>
-                            <constraint firstItem="bzB-Kw-4P1" firstAttribute="top" secondItem="UYG-ct-vbC" secondAttribute="bottom" constant="76" id="utI-Sk-gYM"/>
                             <constraint firstItem="105-Us-qfX" firstAttribute="leading" secondItem="c7J-h4-hJy" secondAttribute="trailing" constant="37" id="wzb-Cx-AuL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="105-Us-qfX" id="nxE-bR-Qrr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
